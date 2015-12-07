@@ -14,7 +14,7 @@ string instrn[8][20] = {{"1","addu","subu","slt","sltu","sllv","srlv","srav","an
                         {"0","blez","bgtz","bltz","bgez","end"},
                         {"0","sll","sra","srl","end"}};
 
-string instrf[6][20] = {{"addu","subu","slt","sltu","srl","sllv","srlv","srav","and","or","xor","nor","end"},
+string instrf[6][20] = {{"addu","subu","slt","sltu","sllv","srlv","srav","and","or","xor","nor","end"},
                         {"addiu","subiu","slti","sltiu","andi","ori","xori","end"},
                         {"lb","lbu","lh","lhu","lw","end"},
                         {"mfhi","mflo","end"},
