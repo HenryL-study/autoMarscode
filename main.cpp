@@ -262,7 +262,7 @@ int main()
                 for(int i=0; i<6; i++)
                 {
                     int indexi = 0;               //每一行中的列下标
-                    while(indexi != 2)
+                    while(indexi != 1)
                     {
                         for(int j=0; j<8; j++)
                         {
