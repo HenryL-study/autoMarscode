@@ -45,14 +45,16 @@ void Nowinstr(string instr, int tag, int type)
                 {
                     code << instr << " $t0 $s" << rdm1 << " to" << label << "\n";
                     code << "nop\n";
-                    code << "to" << label << ": addi $t7 $t7 1\nnop\n";
+                    code << "addi $t7 $t7 1\n";
+                    code << "to" << label << ": nop\n";
                     label++;
                 }
                 else
                 {
                     code << instr << " $s" << rdm1 << " $t0 to" << label << "\n";
                     code << "nop\n";
-                    code << "to" << label << ": addi $t7 $t7 1\nnop\n";
+                    code << "addi $t7 $t7 1\n";
+                    code << "to" << label << ": nop\n";
                     label++;
                 }
                 break;
@@ -61,7 +63,8 @@ void Nowinstr(string instr, int tag, int type)
             {
                 code << instr << " $t0  to" << label << "\n";
                 code << "nop\n";
-                code << "to" << label << ": addi $t7 $t7 1\nnop\n";
+                code << "addi $t7 $t7 1\n";
+                code << "to" << label << ": nop\n";
                 label++;
                 break;
             }
@@ -183,7 +186,7 @@ int main()
     cout << "-------------------CODE AUTO MAKER------------------------------------------\n";
     cout << "|                Powered By Henry Liu                                      |\n";
     cout << "|                  From Padio Planet                                       |\n";
-    cout << "|                                                    Version 0.1           |\n";
+    cout << "|                                                    Version 0.5           |\n";
     cout << "|                                               Contact 583448542@qq.com   |\n";
     cout << "----------------------------------------------------------------------------\n";
     cout << "\n\nPlease read the README.txt first.";
